@@ -12,8 +12,14 @@
 
 // Global variables
     // inquirer 
+    const inquirer = require("inquirer")
     // fileSystem fs
-    // import Classes
+    const fs = require('fs')
+const { Shape, Circle, Triangle, Square } = require("./lib/shape")
+    // import Classes'
+const shape = new Shape();
+
+
 
 // Questions array
 const questions = ["Enter 3 characters for the icon", 
@@ -21,21 +27,70 @@ const questions = ["Enter 3 characters for the icon",
 "What Shape would you like", 
 "What color would you like the shape to be",
 ]
-    // 3 characters
-    // text color
-    // what shape(list)
-    // shape color
 
+const choices = ["circle", "triangle", "square"]
 // Prompt Questions 0-3
+inquirer
+    .prompt([
+        {
+            type: 'input',
+            name: 'text',
+            message: questions[0]
+        },
+        {
+            type: 'input',
+            name: 'textColor',
+            message: questions[1]
+        },
+        {
+            type: 'list',
+            name: 'shape',
+            choices: choices,
+            message: questions[2]
+
+        },
+        {
+            type: 'input',
+            name: 'shapeColor',
+            message: questions[3]
+        }
+    ])
+    .then((data) => {
+        let Logoinfo = data
+    //    Shape(data)'
+    console.log(data)
+    if (data.shape === "circle"){
+        return "circle choosen"
+    }
+    else if (data.shape === "triangle"){
+       return "triangle choosen"
+    } 
+    else if (data.shape === "sqaure") {
+      return "square choosen"
+    }
+
+    })
     // generate Object
 
 // Create .svg File by sending objects to Shape.js
 // create variable logo save else if return
+const logo = new Shape()
     // else if statments
-        // create circle instance
+    // if (data.shape === "circle"){
+    //     new Circle()
+    // }
+    // else if (data.shape === "triangle"){
+    //     new Triangle()
+    // } 
+    // else if (data.shape === "sqaure") {
+    //     new Square()
+    // }
+    //     // create circle instance
         // create triangle instance
         // create sqaure instance 
     // writeToFile
-        // logo variable
+    // fs.writeFile("./examples/logo.svg", logo, (err) =>
+    // err ? console.error(err) : console.log("Success"))
+    //     // logo variable
 
 // Test render() of each shape
