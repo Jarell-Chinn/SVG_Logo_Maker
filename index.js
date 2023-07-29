@@ -3,8 +3,8 @@
 // Prompt for text color(color or hex number) DONE
 // Prompt with list of shapes DONE
 // Prompt for shape color (color or hex number) DONE
-// Create a .svg file named logo.svg
-// Console.log("Generated logo.svg")
+// Create a .svg file named logo.svg DONE
+// Console.log("Generated logo.svg") DONE
 // Logo.svg should be 300x200 Px
 // jest testing on the render
 // Each shape class should be tested for a `render()` method that returns a string for the corresponding SVG file with the given shape color.
@@ -16,7 +16,7 @@ const inquirer = require("inquirer");
 // fileSystem fs
 const fs = require("fs");
 // import Classes'
-const { Shape, Circle, Triangle, Square } = require("./lib/shape");
+const { Shape, Circle, Triangle, Square } = require("./lib/Shape.js");
 
 // Questions array
 const questions = [
