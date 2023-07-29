@@ -1,0 +1,6 @@
+<svg version="1.1"
+    width="300" height="200"
+    xmlns="http://www.w3.org/2000/svg">
+    <rect x="50" y="25" width="200" height="200" fill="Green" />
+    <text x="150" y="120" font-size="50" text-anchor="middle" fill="White">FFS</text>
+    </svg>
